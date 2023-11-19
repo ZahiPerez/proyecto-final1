@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta name="description" content="esta es la descripcion de mi sitio web">
+    <meta name="keywords" content="fime, tecnica desarrollo web">
+    <meta name="robots" content="NOINDEX, NOFOLLOW">
+    <meta name="author" content="FIME">
+    <title>Tarea 1</title>
+</head>
+<body>
+    <style>
+header { 
+    background-color:white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: blue;
+}
+
+.titulo {
+    background: url(https://media.fashionnetwork.com/m/710f/5fcf/8449/aef3/b809/d58b/4c5c/5a2a/b254/6950/6950.jpg) repeat center;
+    color: #fff;
+    height: auto;
+    width: auto;
+    padding: 70px;
+}
+
+.titulo h1 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+.deporte {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    background-color: black;
+}
+
+.articulo {
+    width: calc(33.33% - 10px);
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.articulo a {
+    text-decoration: none;
+}
+
+.articulo:hover {
+    transform: scale(1.015);
+}
+
+.articulo img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.articulo li {
+    list-style-type: none;
+    text-align: left;
+    padding: 10px;
+}
+    </style>
+    <header>
+        <div class="logo">
+            <img src="data:image/png;base64,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" alt="Logo de la casa productora">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#"><strong>Novedades</strong></a></li>
+                <li><a href="#"><strong>Mujer</strong></a></li>
+                <li><a href="#"><strong>Hombre</strong></a></li>
+                <li><a href="#"><strong>Niño</strong></a></li>
+                <li><a href="index.html"><strong>Index</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="titulo">
+        <h1>Articulos</h1>
+    </section>
+    <div class="deporte">
+        <div class="articulo">
+            <a href="https://www.innovasport.com/unisex/b%c3%a1squetbol/accesorios/jordan/balon-jordan-legacy/p/000000000000268781" target="_blank"><strong>Balón Jordan Legacy</strong>
+            <br> <br> <img src="https://dpjye2wk9gi5z.cloudfront.net/wcsstore/ExtendedSitesCatalogAssetStore/images/catalog/default/4015654-0800V1.jpg" height="500" alt="tacos"></a>
+            <br>
+            <p>Jordan - Unisex $1,419.00</p>
+        </div>
+        
+        <div class="articulo">
+            <a href="https://www.amazon.com.mx/Lebron-Angeles-Lakers-Statement-Swingman/dp/B0C62JQ34N/ref=sr_1_13?keywords=lakers&qid=1698564849&sr=8-13&ufe=app_do%3Aamzn1.fos.4e545b5e-1d45-498b-8193-a253464ffa47" target="_blank"><strong>Jersey Nike Los Angeles Lakers Association Edition</strong>
+            <br> <br> <img src="https://m.media-amazon.com/images/I/71b6W-RwEOL._AC_SX679_.jpg" height="500" alt="tamales"></a>
+            <br>
+            <p>Acerca de este articulo</p>
+            <li>100% poliéster</li>
+            <li>Lavar a mano</li>
+            <li>Con licencia oficial de la NBA</li>
+            <li>La playera Swingman cuenta con corte atlético y tela de rendimiento de alta calidad para parecerse a la playera On-Court del jugador</li>
+        </div>
+
+        <div class="articulo">
+                <a href="https://www.amazon.com.mx/NIKE-Jordan-MidLakers-Concord-Taxi-white-black-DQ8426/dp/B0BJW57W8G/ref=sr_1_33?__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=lakers&qid=1698565254&sr=8-33&ufe=app_do%3Aamzn1.fos.4e545b5e-1d45-498b-8193-a253464ffa47" target="_blank"><strong>Jordan MidLakers</strong>
+                <br> <br> <img src="https://i5.walmartimages.com.mx/mg/gm/3pp/asr/16f12f4c-622d-45c9-b66f-594a8d863b7d.819d6e2de46cbdb54b2764c3b9b14358.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" height="500" alt="cristo">
+                </a>
+                <br>
+                <p>Acerca de este articulo</p>
+                <li>Suela de Caucho</li>
+                <li>Air Jordan</li>
+                <li>1 Mid Lakers (2022)</li>
+        </div>
+    </div>
